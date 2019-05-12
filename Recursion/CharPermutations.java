@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class CharPermutations {
 
 	public static void main(String[] args) {
-		char[] arr = {'t','c','d','o'};
-		permute(arr, 0);
+		//char[] arr = {'t','c','d','o'};
+		//permute(arr, 0);
 		int[] numArr = {1, 3, 4, 8};
 		permuteOddEven(numArr, 0);
 	}

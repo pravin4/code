@@ -1,3 +1,4 @@
+package Sorting;
 import java.util.Arrays;
 
 
@@ -9,6 +10,7 @@ public class OddsEvens {
 		
 		while (i<j) {
 			if (arr[j] %2 == 0) {
+				System.out.println(Arrays.toString(arr) + " " + i + " " + j);
 				int temp = arr[j];
 				arr [j] = arr[i];
 				arr[i] = temp;
@@ -21,7 +23,7 @@ public class OddsEvens {
 	}
 	
 	public static void main (String[] args) {
-		int[] arr = {3,4,5,6,81,12,7,19};
+		int[] arr = {8,4,5,6,81,12,7,19};
 		System.out.println(Arrays.toString(solve(arr)));
 	}
 

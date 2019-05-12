@@ -1,3 +1,4 @@
+package Sorting;
 // Java implementation of Min Heap 
 public class MinHeapImpl { 
     private int[] Heap; 

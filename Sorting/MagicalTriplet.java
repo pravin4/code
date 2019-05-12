@@ -1,6 +1,9 @@
+package Sorting;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class MagicalTriplet {
@@ -47,9 +50,44 @@ public class MagicalTriplet {
         return set.toArray(new String[set.size()]);
     }
     
+    
+    static String[] findZeroSum(int[] arr) {
+        int n = arr.length; 
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        Set<String> resultSet = new HashSet<String> ();
+        
+        int low=0, high = 0;
+        
+        for (int i=0; i<n-2; i++) {
+        	low = i+1; high = n-1;
+            
+        	while(low < high) {	
+	        	int sum = arr[i] + arr[low] + arr[high];
+	    		System.out.println(sum + ":" + arr[i] + "," + arr[low] + "," + arr[high]);
+	        	if (sum == 0) {
+	        		resultSet.add(arr[i] + "," + arr[low] + "," + arr[high]);
+	        		low++; 
+	        		high--;
+	        	} else if (sum < 0) {
+	        		low++;
+	        	} else {
+	        		high--;
+	        	}
+            }
+        }
+    	
+		return resultSet.toArray(new String[0]);
+    	
+    }
+    
 	public static void main (String[] args) {
 		ArrayList<Integer> arr = new ArrayList<Integer> (Arrays.asList(2,-2, 0, 1, 3, -3));
 		
-		System.out.println(Arrays.toString(originalSolution(arr)));
+		int[] arr1 = {2,-2, 0, 1, 3, -3};
+		
+		//System.out.println(Arrays.toString(originalSolution(arr)));
+		System.out.println(Arrays.toString(findZeroSum(arr1)));
+
 	}
 }

@@ -1,5 +1,5 @@
+package Sorting;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class SortingTest {
 	
@@ -121,15 +121,12 @@ public class SortingTest {
 	}
 
 	public static void main(String[] args) {
-		HashMap<String, String> testMap = new HashMap<String, String>();
-		testMap.put("Pravin", "test");	
-			System.out.println(testMap);
 			
 		int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
 		//insertionSort(my_array);
 		//quickSort(my_array, 0, my_array.length-1);
-		//mergeSort(my_array, 0, my_array.length-1);
-		selectionSort(my_array);
+		mergeSort(my_array, 0, my_array.length-1);
+		//selectionSort(my_array);
 
 	}
 }
